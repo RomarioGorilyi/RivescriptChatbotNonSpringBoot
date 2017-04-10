@@ -1,0 +1,45 @@
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 4
+:sectlinks:
+
+= RiveScript Dialog Service
+
+== Handling Requests by Default (English) RiveScript Service
+*Request*
+include::test-handle-request-by-default-english-rs-service/curl-request.adoc[]
+include::test-handle-request-by-default-english-rs-service/http-request.adoc[]
+
+*_request body_*
+include::test-handle-request-by-default-english-rs-service/request-fields.adoc[]
+
+*Response*
+include::test-handle-request-by-default-english-rs-service/response-fields.adoc[]
+include::test-handle-request-by-default-english-rs-service/http-response.adoc[]
+
+== Handling Requests by Ukrainian RiveScript Service
+*Request*
+include::test-handle-request-by-ukrainian-rs-language-service/curl-request.adoc[]
+include::test-handle-request-by-ukrainian-rs-language-service/http-request.adoc[]
+
+*_request body_*
+include::test-handle-request-by-ukrainian-rs-language-service/request-fields.adoc[]
+
+*Response*
+include::test-handle-request-by-ukrainian-rs-language-service/response-fields.adoc[]
+include::test-handle-request-by-ukrainian-rs-language-service/http-response.adoc[]
+
+== Handling Requests by Knowledge Service
+*Request*
+include::test-handle-request-by-knowledge-service/curl-request.adoc[]
+include::test-handle-request-by-knowledge-service/http-request.adoc[]
+
+*_request body_*
+include::test-handle-request-by-knowledge-service/request-fields.adoc[]
+
+*Response*
+include::test-handle-request-by-knowledge-service/response-fields.adoc[]
+include::test-handle-request-by-knowledge-service/http-response.adoc[]
+

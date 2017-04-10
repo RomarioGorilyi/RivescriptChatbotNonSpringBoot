@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat view</title>
+
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/style-chat.css">
+
+    <script src="scripts/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="scripts/script-welcome-message.js"></script>
+    <script type="text/javascript" src="scripts/script-chat-window.js"></script>
+    <script type="text/javascript" src="scripts/script-chat-conversation.js"></script>
+</head>
+<body>
+<script>
+    document.addEventListener("DOMContentLoaded", createWelcomeMessage);
+</script>
+
+<div class="container">
+    <div class="row chat-window col-xs-5 col-md-3" id="chat_window_1" style="margin-left:10px;">
+        <div class="col-xs-12 col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading top-bar">
+                    <div class="col-md-8 col-xs-8">
+                        <h3 class="panel-title"><span class="glyphicon glyphicon-comment"></span> Genesys Help</h3>
+                    </div>
+                    <div class="col-md-4 col-xs-4" style="text-align: right">
+                        <a href="#"><span id="minim_chat_window" class="glyphicon glyphicon-minus icon_minim"></span></a>
+                        <a href="#"><span class="glyphicon glyphicon-remove icon_close" data-id="chat_window_1"></span></a>
+                    </div>
+                </div>
+                <div class="panel-body msg_container_base">
+                    <div class="row msg_container chatbot_message">
+                        <div class="col-md-2 col-xs-2 avatar">
+                            <img src="https://d13yacurqjgara.cloudfront.net/users/279657/screenshots/2701628/chatbot.png" class=" img-responsive ">
+                        </div>
+                        <div class="col-md-10 col-xs-10">
+                            <div class="messages msg_receive">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <div class="input-group">
+                        <input id="btn-input" type="text" name="message" class="form-control input-sm chat_input"
+                               placeholder="Write your message here..." autofocus onkeypress="sendRequestOnMessage(event)"/>
+                        <span class="input-group-btn">
+                        <button onclick="makeRequest()" class="btn btn-primary btn-sm" id="btn-chat">Send</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
