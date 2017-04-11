@@ -1,7 +1,6 @@
 package com.genesys.knowledge.rest;
 
-import com.genesys.knowledge.config.AppConfig;
-import com.genesys.knowledge.config.WebMvcConfig;
+import com.genesys.knowledge.config.WebConfig;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Rule;
@@ -40,7 +39,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * Created by RomanH on 24.03.2017.
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = {AppConfig.class, WebMvcConfig.class})
+@ContextConfiguration(classes = {WebConfig.class})
 @WebAppConfiguration
 public class RsControllerTest {
 

@@ -17,7 +17,11 @@ public class AppInitializer implements WebApplicationInitializer {
 
     @Override
     public void onStartup(ServletContext servletContext) throws ServletException {
-        WebApplicationContext context = getContext();
+        registerDispatcherServlet(servletContext);
+    }
+
+    private void registerDispatcherServlet(final ServletContext servletContext) {
+        WebApplicationContext context = createContext();
         servletContext.addListener(new ContextLoaderListener(context));
         ServletRegistration.Dynamic dispatcher =
                 servletContext.addServlet("DispatcherServlet", new DispatcherServlet(context));
@@ -25,7 +29,7 @@ public class AppInitializer implements WebApplicationInitializer {
         dispatcher.addMapping("/*");
     }
 
-    private AnnotationConfigWebApplicationContext getContext() {
+    private AnnotationConfigWebApplicationContext createContext() {
         AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
         context.setConfigLocation("com.genesys.knowledge.config");
         return context;
