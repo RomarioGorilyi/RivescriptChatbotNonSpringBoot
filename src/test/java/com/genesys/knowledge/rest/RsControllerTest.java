@@ -116,7 +116,7 @@ public class RsControllerTest {
     @Test
     public void testRegisterUserDataAndHandleTopicRequest() throws Exception {
         initMVC();
-        ResultActions actions = mockMvc.perform(RestDocumentationRequestBuilders.post("/registration/")
+        ResultActions actions = mockMvc.perform(RestDocumentationRequestBuilders.post("/registrar/")
                 .header("username", "testUser")
                 .header("lang", "eng")
                 .header("topic", "topic1"));

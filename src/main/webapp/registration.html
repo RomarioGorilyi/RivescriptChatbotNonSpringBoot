@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Registration</title>
-    <link rel="stylesheet" type="text/css" href="styles/style-registration.css">
-    <script src="scripts/jquery-3.2.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="resources/styles/style-registration.css">
+    <script src="resources/scripts/jquery-3.2.0.min.js"></script>
 </head>
 <body>
 <script>
@@ -17,7 +17,7 @@
         var topic = document.getElementById('topic').value;
 
         var xhr = new XMLHttpRequest();
-        xhr.open('POST', '/registration/', true);
+        xhr.open('POST', '/chatbot-1.0/registrar', true);
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.setRequestHeader('username', username);
         xhr.setRequestHeader('lang', lang);
@@ -29,7 +29,7 @@
                 alert(xhr.status + ': ' + xhr.statusText);
             } else {
                 document.cookie = "lang=" + lang;
-                window.location.replace("/chat.html");
+                window.location.replace("/chatbot-1.0/chat.html");
             }
         };
         setTimeout(function() {

@@ -5,6 +5,7 @@ import com.genesys.knowledge.domain.Response;
 import com.genesys.knowledge.service.knowledge.KnowledgeService;
 import com.genesys.knowledge.service.rivescript.RsService;
 import com.genesys.knowledge.service.rivescript.RsServicePool;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -14,7 +15,9 @@ import javax.servlet.http.HttpSession;
 /**
  * Created by RomanH on 22.03.2017.
  */
+@Slf4j
 @RestController
+@RequestMapping("/")
 public class RsController {
 
     @Autowired
@@ -22,7 +25,7 @@ public class RsController {
     @Autowired
     private KnowledgeService knowledgeService;
 
-    @RequestMapping(value = "/chatbot/", method = RequestMethod.POST, produces = "application/json")
+    @RequestMapping(value = "/chatbot", method = RequestMethod.POST, produces = "application/json")
     @ResponseStatus(HttpStatus.OK)
     public Response replyToMessage(@RequestBody Request request, HttpSession session) {
         String username = (String) session.getAttribute("username");
@@ -37,8 +40,10 @@ public class RsController {
         RsService rsService = rsServicePool.getRsService(language);
 
         String requestMessage = request.getMessage();
+        log.info("request=" + requestMessage);
 
         String rsResponseMessage = rsService.reply(username, requestMessage);
+        log.info("response=" + rsResponseMessage);
         String keyWord = "knowledge ";
         if (rsResponseMessage.contains(keyWord)) {
             String knowledgeResponseMessage = knowledgeService.processRequest(username, rsResponseMessage);
@@ -48,7 +53,7 @@ public class RsController {
         }
     }
 
-    @RequestMapping(value = "/registration/", method = RequestMethod.POST)
+    @RequestMapping(value = "/registrar", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.OK)
     public void registerUserData(@RequestHeader("username") String username,
                                  @RequestHeader("lang") String language,

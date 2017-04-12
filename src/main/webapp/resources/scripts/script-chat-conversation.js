@@ -3,7 +3,7 @@
  */
 function makeRequest() {
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', '/chatbot/', true);
+    xhr.open('POST', '/chatbot-1.0/chatbot', true);
     xhr.setRequestHeader('Content-Type', 'application/json');
 
     var message = document.getElementById('btn-input').value;
