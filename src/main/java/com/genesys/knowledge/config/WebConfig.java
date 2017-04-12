@@ -21,6 +21,10 @@ import org.thymeleaf.templateresolver.TemplateResolver;
 @ComponentScan(basePackages = "com.genesys.knowledge")
 public class WebConfig extends WebMvcConfigurerAdapter {
 
+    public WebConfig() {
+        super();
+    }
+
     @Override
     public void addResourceHandlers(final ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
@@ -29,6 +33,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/").setViewName("forward:/registration.html");
+        //registry.addViewController("/registration.html").setViewName("registration");
         registry.setOrder(Ordered.HIGHEST_PRECEDENCE);
         super.addViewControllers(registry);
     }
@@ -55,12 +60,6 @@ public class WebConfig extends WebMvcConfigurerAdapter {
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
         configurer.enable();
     }
-
-//    @Override
-//    public void addViewControllers(ViewControllerRegistry registry) {
-//        registry.addViewController("/login.html").setViewName("login");
-//        //        registry.addViewController("/status").setViewName("status");
-//    }
 
     @Bean
     public TemplateResolver templateResolver() {
