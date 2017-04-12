@@ -28,10 +28,14 @@ public class RsServicePool {
     }
 
     private void initServices() {
-        List<String> supportedLanguages = listSupportedLanguages();
-        for (String lang : supportedLanguages) {
-            rsServices.put(lang, new RsService(lang));
-        }
+//        List<String> supportedLanguages = listSupportedLanguages();
+//        for (String lang : supportedLanguages) {
+//            rsServices.put(lang, new RsService(lang));
+//        }
+        // TODO think over better approach to determine all supported languages
+        rsServices.put("eng", new RsService("eng"));
+        rsServices.put("ukr", new RsService("ukr"));
+        rsServices.put("rus", new RsService("rus"));
     }
 
     /**
