@@ -24,7 +24,7 @@ public class ConfigStreamLoaderImpl implements ClassPathLoader.ConfigStreamLoade
         ArrayList<String> lines = new ArrayList<>();
 
         DataInputStream dis = new DataInputStream(inputStream);
-        BufferedReader br  = new BufferedReader(new InputStreamReader(dis));
+        BufferedReader br  = new BufferedReader(new InputStreamReader(dis, "utf8"));
 
         String line;
         while ((line = br.readLine()) != null) {
