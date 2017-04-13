@@ -9,21 +9,21 @@
 ! var master = localuser
 
 // Bot Variables
-! var name     = Aiden
-! var fullname = Aiden Rive
+! var name     = Маша
+! var fullname = Маша иванова
 ! var age      = 5
-! var birthday = October 12
+! var birthday = 2 Февраля
 ! var sex      = male
-! var location = Michigan
-! var city     = Detroit
+! var location = Киев
+! var city     = Киев
 ! var eyes     = blue
-! var hair     = light brown
-! var hairlen  = short
-! var color    = blue
+! var hair     = русые
+! var hairlen  = короткие
+! var color    = голубой
 ! var band     = Nickelback
-! var book     = Myst
-! var author   = Stephen King
-! var job      = robot
+! var book     = Война и мир
+! var author   = Толстой
+! var job      = трындю
 ! var website  = www.rivescript.com
 
 // Substitutions
@@ -32,18 +32,18 @@
 ! sub &amp;     = &
 ! sub &lt;      = <
 ! sub &gt;      = >
-! sub +         = plus
-! sub -         = minus
-! sub /         = divided
-! sub *         = times
-! sub i'm       = i am
-! sub i'd       = i would
-! sub i've      = i have
-! sub i'll      = i will
-! sub don't     = do not
-! sub isn't     = is not
-! sub you'd     = you would
-! sub you're    = you are
+! sub +         = плюс
+! sub -         = минус
+! sub /         = делить на
+! sub *         = раз
+! sub i'm       = Я
+! sub i'd       = Я бы
+! sub i've      = у меня
+! sub i'll      = я буду
+! sub don't     = не буду
+! sub isn't     = не
+! sub you'd     = ты бы
+! sub you're    = вы
 ! sub you've    = you have
 ! sub you'll    = you will
 ! sub he'd      = he would
@@ -126,12 +126,12 @@
 ! sub bf        = boyfriend
 ! sub b/f       = boyfriend
 ! sub b/f/f     = best friend forever
-! sub :-)       = smile
-! sub :)        = smile
+! sub :-)       = улыбка
+! sub :)        = улыбка
 ! sub :d        = grin
 ! sub :-d       = grin
-! sub :-p       = tongue
-! sub :p        = tongue
+! sub :-p       = язык
+! sub :p        = язык
 ! sub ;-)       = wink
 ! sub ;)        = wink
 ! sub :-(       = sad
@@ -178,13 +178,12 @@
 ! person i       = you
 
 // Set arrays
-! array malenoun   = male guy boy dude boi man men gentleman gentlemen
-! array femalenoun = female girl chick woman women lady babe
-! array mennoun    = males guys boys dudes bois men gentlemen
-! array womennoun  = females girls chicks women ladies babes
-! array lol        = lol lmao rofl rotfl haha hahaha
-! array colors     = white black orange red blue green yellow cyan fuchsia gray grey brown turquoise pink purple gold silver navy
-! array height     = tall long wide thick
-! array measure    = inch in centimeter cm millimeter mm meter m inches centimeters millimeters meters
-! array yes        = yes yeah yep yup ya yea
-! array no         = no nah nope nay
+! array malenoun   = парень приятель чувак мальчик мужчина муж жених мужчина мужик
+! array femalenoun = женщина жена невеста девочка девушка чувиха коза жена баба
+! array mennoun    = мужчины парни чуваки приятели мальчики женихи мужья мужики
+! array womennoun  = женщины жены чувихи козы бабы
+! array colors     = красный оранжевый желтый зеленый голубой синий фиолетовый магента циан черный белый
+! array height     = высокий длинный широкий толстый
+! array measure    = метры сантиметры метр сантиметр километры километр килограммы килограмм тонны тонна миллиметры миллиметр градусы градус м км см мм кг т
+! array yes        = да
+! array no         = нет
